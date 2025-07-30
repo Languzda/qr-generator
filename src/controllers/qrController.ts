@@ -13,7 +13,6 @@ export const generateQRCode = (
       return;
     }
 
-
     // Generate QR code
     QRCode.toDataURL(text, { errorCorrectionLevel: 'H' })
       .then((url) => {
@@ -25,4 +24,4 @@ export const generateQRCode = (
   } catch (error) {
     next(error);
   }
-}
+};

@@ -1,6 +1,6 @@
-import {Router} from 'express';
+import { Router } from 'express';
 
-import {generateQRCode} from '../controllers/qrController';
+import { generateQRCode } from '../controllers/qrController';
 
 const router = Router();
 
