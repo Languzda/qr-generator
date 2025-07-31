@@ -3,7 +3,6 @@
   "globalDependencies": ["**/.env.*local"],
   "ui": "tui",
   "tasks": {
-
     "build": {
       "dependsOn": ["^build"],
       "inputs": ["$TURBO_DEFAULT$", ".env*"],
@@ -17,9 +16,21 @@
       "dependsOn": ["^lint"],
       "outputs": []
     },
-    "check-types": {
-      "dependsOn": ["^check-types"],
+    "clean": {
+      "cache": false
+    },
+    "format": {
+      "dependsOn": ["^format"],
       "outputs": []
+    },
+    "test": {
+      "dependsOn": [
+        "^test"
+      ],
+      "inputs": [
+        "$TURBO_DEFAULT$",
+        ".env*"
+      ]
     }
   }
 }
