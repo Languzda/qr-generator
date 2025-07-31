@@ -1,46 +1,23 @@
 {
-  "name": "qr-generator-api",
+  "name": "qr-generator",
   "version": "1.0.0",
-  "main": "dist/server.js",
+  "description": "",
+  "private": true,
+  "packageManager": "pnpm@10.13.1",
   "scripts": {
-    "build": "tsc",
-    "start": "node dist/server.js",
-    "dev": "nodemon --watch 'src/**/*.ts' --exec ts-node src/server.ts",
-    "lint": "eslint . --ext .ts",
-    "lint:fix": "eslint . --ext .ts --fix",
-    "format": "prettier --write .",
-    "format:check": "prettier --check .",
-    "test": "jest",
-    "test:watch": "jest --watch"
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "lint": "turbo run lint",
+    "format": "turbo run format",
+    "test": "turbo run test",
+    "clean": "turbo run clean"
   },
   "keywords": [],
   "author": "Robert Dobrowolski",
   "license": "ISC",
-  "description": "",
   "devDependencies": {
-    "@types/express": "^5.0.3",
-    "@types/jest": "^30.0.0",
-    "@types/node": "^24.1.0",
-    "@types/qrcode": "^1.5.5",
-    "@typescript-eslint/eslint-plugin": "^8.38.0",
-    "@typescript-eslint/parser": "^8.38.0",
-    "dotenv": "^17.2.1",
-    "eslint": "^9.32.0",
-    "eslint-plugin-import": "^2.32.0",
-    "eslint-plugin-jest": "^29.0.1",
-    "eslint-plugin-prettier": "^5.5.3",
-    "eslint-plugin-security": "^3.0.1",
-    "express": "^5.1.0",
-    "install": "^0.13.0",
-    "jest": "^30.0.5",
-    "nodemon": "^3.1.10",
-    "npm": "^11.5.1",
     "prettier": "^3.6.2",
-    "ts-jest": "^29.4.0",
-    "ts-node": "^10.9.2",
+    "turbo": "^2.5.5",
     "typescript": "^5.8.3"
-  },
-  "dependencies": {
-    "qrcode": "^1.5.4"
   }
 }
