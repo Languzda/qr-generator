@@ -10,7 +10,7 @@ COPY package*.json ./
 RUN npm ci
 
 # Copy the rest of the source code.
-COPY ../.. .
+COPY . .
 
 # Build the project (assuming tsc is configured to output to the 'dist' folder)
 RUN npm run build
